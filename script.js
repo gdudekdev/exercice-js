@@ -45,4 +45,74 @@
 
 // console.log(playlist)
 
-console.log("hello world")
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let listeMots=["Cachalot","Pétunia","Serviette"];
+// let score=0;
+// let premierMot=prompt("Rentrez le mot contenu dans la première case");
+
+// if (listeMots[0]==premierMot){
+//     score+=1;
+// }
+// console.log(score)
+
+// let secondMot=prompt("Rentrez le mot contenu dans la seconde case");
+
+// if (listeMots[1]==secondMot){
+//     score+=1;
+// }
+// console.log(score)
+
+// let dernierMot=prompt("Rentrez le mot contenu dans la dernière case");
+
+// if (listeMots[2]==dernierMot){
+//     score+=1;
+// }
+// console.log(score)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let listeMots=["Cachalot","Pétunia","Serviette"];
+// let score=0;
+
+// for(let i=0;i<3;i++){
+//     let motCourant=prompt("Rentrez le mot contenu dans la case n°"+(i+1) );
+
+//     if(motCourant==listeMots[i]){
+//         score++;
+//     };
+//     console.log(score);
+
+// };
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let listeMots=["Cachalot","Pétunia","Serviette"];
+let listePhrases=["Pas de panique !", "La vie, l’univers et le reste", "Merci pour le poisson"];
+let score=0;
+
+let choixUtilisateur=prompt("Choisissez entre la liste : mots ou phrases")
+
+while (choixUtilisateur!=="mots" && choixUtilisateur!=="phrases"){
+    choixUtilisateur=prompt("Choisissez entre la liste : mots ou phrases");
+};
+
+if(choixUtilisateur=="mots"){
+    for(let i=0;i<listeMots.length;i++){
+        let motCourant=prompt("Rentrez le mot: " +listeMots[i] );
+        if(motCourant==listeMots[i]){
+            score++;
+        };
+        
+    };
+    console.log("Votre score est de "+ score+ " sur "+ listeMots.length);
+}else{
+    for(let i=0;i<listePhrases.length;i++){
+        let phraseCourant=prompt("Rentrez la phrase: " +listePhrases[i] );
+        if(phraseCourant==listePhrases[i]){
+            score++;
+        };
+    };
+    console.log("Votre score est de "+ score+ " sur "+ listePhrases.length);
+};
+
